@@ -14,7 +14,7 @@ LogicCode::LogicCode()
 void LogicCode::readfile()
 {
     int numTours = 0;
-    QString array[1024][10];
+    QString array[1024][11];
     QStringList arrayColumn;
     QFile inputFile(this->filename);
     if (inputFile.open(QIODevice::ReadOnly))
@@ -49,21 +49,22 @@ void LogicCode::saveFile() {
         return;
 
     QTextStream out(&file);
-    out << "Name\t\tDatum;\t\tStrecke;\tSchnitt;\tHoehenmeter;\tZeit;\n";
+    out << "Name; Datum; Strecke; Schnitt; Hoehenmeter; Zeit; Bemerkung; \n";
     for (int i=0 ; i<numTours ; i++) {
         tour = this->arrTour[i];
-        out << tour.giveTag() << ";\t";
-        out << tour.giveDate().toString("dd/MM/yyyy") << ";\t";
-        out << tour.giveDistance() << ";\t\t";
-        out << tour.giveVM() << ";\t\t";
-        out << tour.giveDH() << ";\t\t";
-        out << tour.giveTime().toString("hh:mm:ss") << ";\n";
+        out << tour.giveTag() << "; ";
+        out << tour.giveDate().toString("dd/MM/yyyy") << "; ";
+        out << tour.giveDistance() << "; ";
+        out << tour.giveVM() << "; ";
+        out << tour.giveDH() << "; ";
+        out << tour.giveTime().toString("hh:mm:ss") << "; ";
+        out << tour.giveComment() << ";\n";
     }
     std::cout << "File saved to: " << this->filename.toStdString() << std::endl;
 }
 
 
-void LogicCode::makeTourObjects(int numTours , QString arrData[][10]){
+void LogicCode::makeTourObjects(int numTours , QString arrData[][11]){
     QTime time;
     QDate date;
 
@@ -76,7 +77,8 @@ void LogicCode::makeTourObjects(int numTours , QString arrData[][10]){
                                         arrData[i][4].toFloat() ,
                                         arrData[i][5].toFloat() ,
                                         arrData[i][6].toFloat() ,
-                                        time);
+                                        time ,
+                                        arrData[i][10]);
     }
     std::cout<< "Anzahl der Touren: "<<numTours<<std::endl;
 }

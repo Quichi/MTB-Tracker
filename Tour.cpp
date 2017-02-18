@@ -19,15 +19,17 @@ Tour::Tour(){
     Tour::distance = 0;
 	Tour::vm = 0;
 	Tour::dH = 0;
+    Tour::comment = "";
 }
 
-Tour::Tour(QString tag, QDate date, float distance, float vm, float dH, QTime time) {
+Tour::Tour(QString tag, QDate date, float distance, float vm, float dH, QTime time, QString comment) {
     Tour::tag = tag;
 	Tour::distance = distance;
 	Tour::vm = vm;
 	Tour::dH = dH;
 	Tour::time = time;
 	Tour::date = date;
+    Tour::comment = comment;
 
     Tour::tourCount++;
     Tour::number = Tour::tourCount;
@@ -77,6 +79,11 @@ float Tour::giveVM() {
 float Tour::giveDH() {
     //std::cout<<Tour::dH<<std::endl;
     return Tour::dH;
+}
+
+QString Tour::giveComment() {
+    //std::cout<<Tour::comment<<std::endl;
+    return Tour::comment;
 }
 
 void Tour::resetCount() {

@@ -10,7 +10,7 @@ public:
     LogicCode();
     void readfile();
     void saveFile();
-    void makeTourObjects(int numTours , QString arrData[][10]);
+    void makeTourObjects(int numTours , QString arrData[][11]);
     void addTour(Tour newTour);
     Tour giveTour(int tourNr);
     float calcTotalDistance();

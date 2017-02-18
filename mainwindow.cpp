@@ -71,8 +71,9 @@ void MainWindow::addTableRow(int row) {
     arrayItems[3] = new QTableWidgetItem(logicCode.giveTour(row).giveTime().toString("HH:mm:ss"));
     arrayItems[4] = new QTableWidgetItem(QString::number(logicCode.giveTour(row).giveVM()));
     arrayItems[5] = new QTableWidgetItem(QString::number(logicCode.giveTour(row).giveDH()));
+    arrayItems[6] = new QTableWidgetItem(logicCode.giveTour(row).giveComment());
 
-    for(int i=0 ; i<=5 ; i++){
+    for(int i=0 ; i<=6 ; i++){
         ui->twTouren->setItem(row,i,arrayItems[i]);
     }
 }

@@ -20,12 +20,13 @@ private:
 	float dH;
     QTime time;
     QDate date;
+    QString comment;
 
 	static int tourCount;
 	static float totalDistance;
 public:
 	Tour();
-    Tour(QString tag, QDate date, float distance, float vm, float dH, QTime time);
+    Tour(QString tag, QDate date, float distance, float vm, float dH, QTime time, QString comment);
 	~Tour();
 
 	int EineFunktion(int day=1);
@@ -36,6 +37,7 @@ public:
 	float giveDH();
     QTime giveTime();
     QDate giveDate();
+    QString giveComment();
 	int giveCount();
 	float giveTotalDistance();
     void resetCount();

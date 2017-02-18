@@ -41,8 +41,9 @@ Tour NewTourWindow::giveNewTour()
     float dH = ui->leHoehenmeter->displayText().toFloat();
     QDate date = ui->deDatum->date();
     QTime time = ui->teDauer->time();
+    QString comment = ui->leBemerkung->displayText();
 
-    newTour = Tour(name, date, distance, vm, dH, time);
+    newTour = Tour(name, date, distance, vm, dH, time, comment);
 
     return newTour;
 }
