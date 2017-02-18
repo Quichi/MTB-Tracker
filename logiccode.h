@@ -21,7 +21,7 @@ public:
     void clearTourObjects();
 
 private:
-    QString filename = "Data2016.csv";
+    QString filename = "Data.csv";
     Tour arrTour[1024];
     float targetDistance;
 };
