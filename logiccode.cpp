@@ -11,7 +11,8 @@ LogicCode::LogicCode()
 
 }
 
-void LogicCode::readfile() {
+void LogicCode::readfile()
+{
     int numTours = 0;
     QString array[1024][10];
     QStringList arrayColumn;
