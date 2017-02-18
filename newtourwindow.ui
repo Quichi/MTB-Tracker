@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>230</width>
-    <height>280</height>
+    <width>273</width>
+    <height>317</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -28,13 +28,13 @@
   <property name="windowTitle">
    <string>Create New Tour</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>211</width>
-     <height>261</height>
+     <width>251</width>
+     <height>294</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -97,7 +97,7 @@
         <item>
          <widget class="QTimeEdit" name="teDauer">
           <property name="currentSection">
-           <enum>QDateTimeEdit::MinuteSection</enum>
+           <enum>QDateTimeEdit::HourSection</enum>
           </property>
           <property name="displayFormat">
            <string>HH:mm:ss</string>
@@ -139,18 +139,6 @@
     </item>
    </layout>
   </widget>
-  <zorder>buttonBox</zorder>
-  <zorder>leBezeichnung</zorder>
-  <zorder>leStrecke</zorder>
-  <zorder>lineEdit_3</zorder>
-  <zorder>leHoehenmeter</zorder>
-  <zorder>lineEdit_5</zorder>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
-  <zorder>label_3</zorder>
-  <zorder>label_4</zorder>
-  <zorder>label_5</zorder>
-  <zorder>label_2</zorder>
  </widget>
  <tabstops>
   <tabstop>leBezeichnung</tabstop>
